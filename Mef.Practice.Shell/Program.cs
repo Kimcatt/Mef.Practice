@@ -7,7 +7,7 @@ using System.ComponentModel.Composition;
 using BankService.Card;
 using System.ComponentModel.Composition.Hosting;
 
-namespace MefDemo
+namespace Mef.Practice.Shell
 {
     class Program
     {

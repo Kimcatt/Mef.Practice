@@ -17,6 +17,7 @@ namespace ChinaConstructionBankService.Card
         {
             get
             {
+                ExecuteTimeConsumingOperation();
                 return money;
             }
 
@@ -28,17 +29,25 @@ namespace ChinaConstructionBankService.Card
 
         public string GetCountInfo()
         {
+            ExecuteTimeConsumingOperation();
             return $"{nameof(ChinaConstructionBankCard)}#{this.GetHashCode()}";
         }
 
         public void SaveMoney(double money)
         {
+            ExecuteTimeConsumingOperation();
             this.money += money;
         }
 
         public void WithdrawMoney(double money)
         {
+            ExecuteTimeConsumingOperation();
             this.money -= money;
+        }
+
+        private void ExecuteTimeConsumingOperation()
+        {
+            System.Threading.Thread.Sleep(1500);
         }
     }
 }

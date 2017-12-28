@@ -7,8 +7,8 @@
     <ProjectGuid>{10ECE806-463A-474C-B434-E2F37B6789B6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MefDemo</RootNamespace>
-    <AssemblyName>MefDemo</AssemblyName>
+    <RootNamespace>Mef.Practice.Shell</RootNamespace>
+    <AssemblyName>Mef.Practice.Shell</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
