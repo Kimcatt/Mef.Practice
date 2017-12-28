@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{10ECE806-463A-474C-B434-E2F37B6789B6}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{924AAB6B-3500-4B44-81AD-3636040328A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mef.Practice.Shell</RootNamespace>
-    <AssemblyName>Mef.Practice.Shell</AssemblyName>
+    <RootNamespace>Mef.Practice.Service.SimpleJsonSerializer</RootNamespace>
+    <AssemblyName>Mef.Practice.Service.SimpleJsonSerializer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
@@ -43,29 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculatorShell.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="SimpleJsonSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SerializerShell.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BankCard\BankService\BankService.csproj">
-      <Project>{7462bd4b-3203-466e-a695-5f43370f1db0}</Project>
-      <Name>BankService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mef.Practice.Service\Mef.Practice.Service.csproj">
+    <ProjectReference Include="..\..\Mef.Practice.Service\Mef.Practice.Service.csproj">
       <Project>{64e9e919-f60c-434b-a46f-dfe2d8c42f00}</Project>
       <Name>Mef.Practice.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>IF NOT EXIST "$(TargetDir)\Cards" mkdir "$(TargetDir)\Cards"
-IF NOT EXIST "$(TargetDir)\Calculators" mkdir "$(TargetDir)\Calculators"
-IF NOT EXIST "$(TargetDir)\Serializers" mkdir "$(TargetDir)\Serializers"</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(SolutionDir)Mef.Practice.Shell\bin\$(ConfigurationName)\Serializers\" /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

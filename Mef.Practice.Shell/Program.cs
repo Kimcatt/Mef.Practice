@@ -58,7 +58,9 @@ namespace Mef.Practice.Shell
             }
 
             // Calculator demo
-            CalculatorShell.Launch(null);
+            //CalculatorShell.Launch(null);
+
+            SerializerShell.Launch();
 
             Console.Read();
         }
