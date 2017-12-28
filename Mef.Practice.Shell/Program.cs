@@ -56,7 +56,9 @@ namespace Mef.Practice.Shell
                     Console.WriteLine("Acount balance: $" + card.Money);
                 }
             }
-            
+
+            // Calculator demo
+            CalculatorShell.Launch(null);
 
             Console.Read();
         }

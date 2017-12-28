@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChinaConstructionBankServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mef.Practice.Shell", "Mef.Practice.Shell\Mef.Practice.Shell.csproj", "{10ECE806-463A-474C-B434-E2F37B6789B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculator", "Calculator", "{1FA3D637-25D2-43C0-8CD2-9EE85186A8B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mef.Practice.Service", "Mef.Practice.Service\Mef.Practice.Service.csproj", "{64E9E919-F60C-434B-A46F-DFE2D8C42F00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mef.Practice.Service.SimpleCalculator", "Calculator\Mef.Practice.Service.SimpleCalculator\Mef.Practice.Service.SimpleCalculator.csproj", "{DA3FCD89-9ECE-46E2-B445-363D4FE8A6F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +39,19 @@ Global
 		{10ECE806-463A-474C-B434-E2F37B6789B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10ECE806-463A-474C-B434-E2F37B6789B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10ECE806-463A-474C-B434-E2F37B6789B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E9E919-F60C-434B-A46F-DFE2D8C42F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E9E919-F60C-434B-A46F-DFE2D8C42F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E9E919-F60C-434B-A46F-DFE2D8C42F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E9E919-F60C-434B-A46F-DFE2D8C42F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA3FCD89-9ECE-46E2-B445-363D4FE8A6F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3FCD89-9ECE-46E2-B445-363D4FE8A6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3FCD89-9ECE-46E2-B445-363D4FE8A6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3FCD89-9ECE-46E2-B445-363D4FE8A6F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA3FCD89-9ECE-46E2-B445-363D4FE8A6F2} = {1FA3D637-25D2-43C0-8CD2-9EE85186A8B9}
 	EndGlobalSection
 EndGlobal

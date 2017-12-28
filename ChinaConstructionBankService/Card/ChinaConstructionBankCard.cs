@@ -47,7 +47,7 @@ namespace ChinaConstructionBankService.Card
 
         private void ExecuteTimeConsumingOperation()
         {
-            System.Threading.Thread.Sleep(1500);
+            System.Threading.Thread.Sleep(500);
         }
     }
 }

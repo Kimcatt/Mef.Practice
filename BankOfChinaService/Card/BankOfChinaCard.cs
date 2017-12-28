@@ -49,7 +49,7 @@ namespace BankOfChinaService.Card
 
         private void ExecuteTimeConsumingOperation()
         {
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(500);
         }
     }
 }
