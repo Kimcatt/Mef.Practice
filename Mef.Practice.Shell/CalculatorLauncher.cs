@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Mef.Practice.Shell
 {
-    public class CalculatorShell
+    public class CalculatorLauncher
     {
         private CompositionContainer _container;
 
@@ -17,7 +17,7 @@ namespace Mef.Practice.Shell
         public ICalculator calculator;
 
 
-        private CalculatorShell()
+        private CalculatorLauncher()
         {
             //An aggregate catalog that combines multiple catalogs
             var catalog = new AggregateCatalog();
@@ -43,7 +43,7 @@ namespace Mef.Practice.Shell
 
         public static void Launch(string[] args)
         {
-            CalculatorShell p = new CalculatorShell(); //Composition is performed in the constructor
+            CalculatorLauncher p = new CalculatorLauncher(); //Composition is performed in the constructor
             String s;
             Console.WriteLine("Enter Expression:");
             while (true)

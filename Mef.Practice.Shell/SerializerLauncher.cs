@@ -9,14 +9,14 @@ using System.Dynamic;
 
 namespace Mef.Practice.Shell
 {
-    public class SerializerShell
+    public class SerializerLauncher
     {
         private CompositionContainer _container;
 
         [Import]
         public Service.Serialization.ISerializer Serializer { get; set; }
 
-        public SerializerShell()
+        public SerializerLauncher()
         {
             //An aggregate catalog that combines multiple catalogs
             var catalog = new AggregateCatalog();
@@ -44,7 +44,7 @@ namespace Mef.Practice.Shell
             WriteLine("Serializer shell running...", ConsoleColor.Green);
             var v = new Dictionary<string, string>();
             v.Add("A", "a");
-            Console.WriteLine(new SerializerShell().Serializer.Serialize(v));
+            Console.WriteLine(new SerializerLauncher().Serializer.Serialize(v));
             Console.WriteLine(new { Name = "Kimcatt", Loc = "ShangHai" });
         }
     

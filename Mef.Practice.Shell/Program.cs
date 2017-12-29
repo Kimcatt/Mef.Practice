@@ -57,10 +57,10 @@ namespace Mef.Practice.Shell
                 }
             }
 
-            // Calculator demo
-            //CalculatorShell.Launch(null);
+            //Calculator demo
+            //CalculatorLauncher.Launch(null);
 
-            SerializerShell.Launch();
+            SerializerLauncher.Launch();
 
             Console.Read();
         }
