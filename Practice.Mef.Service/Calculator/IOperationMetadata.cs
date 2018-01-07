@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mef.Practice.Service.Serialization
+namespace Practice.Mef.Service.Calculator
 {
-    public interface ISerializer
+    public interface IOperationMetadata
     {
-        string Serialize(object obj);
+        Char Symbol { get; }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Mef.Practice.Service.SimpleCalculator")]
+[assembly: AssemblyTitle("Practice.Mef.Service.SimpleJsonSerializer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Mef.Practice.Service.SimpleCalculator")]
+[assembly: AssemblyProduct("Practice.Mef.Service.SimpleJsonSerializer")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("da3fcd89-9ece-46e2-b445-363d4fe8a6f2")]
+[assembly: Guid("924aab6b-3500-4b44-81ad-3636040328a1")]
 
 // Version information for an assembly consists of the following four values:
 //

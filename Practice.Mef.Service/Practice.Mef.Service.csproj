@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{924AAB6B-3500-4B44-81AD-3636040328A1}</ProjectGuid>
+    <ProjectGuid>{64E9E919-F60C-434B-A46F-DFE2D8C42F00}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mef.Practice.Service.SimpleJsonSerializer</RootNamespace>
-    <AssemblyName>Mef.Practice.Service.SimpleJsonSerializer</AssemblyName>
+    <RootNamespace>Practice.Mef.Service</RootNamespace>
+    <AssemblyName>Practice.Mef.Service</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,12 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,22 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpleJsonSerializer.cs" />
+    <Compile Include="Calculator\ICalculator.cs" />
+    <Compile Include="Calculator\IOperation.cs" />
+    <Compile Include="Calculator\IOperationMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Mef.Practice.Service\Mef.Practice.Service.csproj">
-      <Project>{64e9e919-f60c-434b-a46f-dfe2d8c42f00}</Project>
-      <Name>Mef.Practice.Service</Name>
-    </ProjectReference>
+    <Compile Include="Serializer\ISerializer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)*.*" "$(SolutionDir)Mef.Practice.Shell\bin\$(ConfigurationName)\Serializers\" /Y</PostBuildEvent>
-  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

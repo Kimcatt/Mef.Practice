@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mef.Practice.Service.Calculator
+namespace Practice.Mef.Service.Serialization
 {
-    public interface ICalculator
+    public interface ISerializer
     {
-        string Calculate(string expr);
+        string Serialize(object obj);
     }
 }

@@ -7,7 +7,7 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.Dynamic;
 
-namespace Mef.Practice.Shell
+namespace Practice.Mef.Shell
 {
     public class SerializerLauncher
     {

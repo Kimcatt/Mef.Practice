@@ -1,4 +1,4 @@
-﻿using Mef.Practice.Service.Calculator;
+﻿using Practice.Mef.Service.Calculator;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mef.Practice.Shell
+namespace Practice.Mef.Shell
 {
     public class CalculatorLauncher
     {

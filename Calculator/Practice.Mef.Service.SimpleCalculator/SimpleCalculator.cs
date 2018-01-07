@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.Composition;
-using Mef.Practice.Service.Calculator;
+using Practice.Mef.Service.Calculator;
 
-namespace Mef.Practice.Service.SimpleCalculator
+namespace Practice.Mef.Service.SimpleCalculator
 {
     [Export(typeof(ICalculator))]
-    public class SimpleCalculator : Practice.Service.Calculator.ICalculator
+    public class SimpleCalculator : Practice.Mef.Service.Calculator.ICalculator
     {
         [ImportMany]
         IEnumerable<Lazy<IOperation, IOperationMetadata>> operations;

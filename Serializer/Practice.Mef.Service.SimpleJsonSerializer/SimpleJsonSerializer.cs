@@ -1,4 +1,4 @@
-﻿using Mef.Practice.Service.Serialization;
+﻿using Practice.Mef.Service.Serialization;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleJsonSerializer
+namespace Practice.Mef.Service.SimpleJsonSerializer
 {
     [Export(typeof(ISerializer))]
     public class SimpleJsonSerializer : ISerializer

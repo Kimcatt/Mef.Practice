@@ -7,7 +7,7 @@ using System.ComponentModel.Composition;
 using BankService.Card;
 using System.ComponentModel.Composition.Hosting;
 
-namespace Mef.Practice.Shell
+namespace Practice.Mef.Shell
 {
     class Program
     {
@@ -57,10 +57,10 @@ namespace Mef.Practice.Shell
                 }
             }
 
-            //Calculator demo
-            //CalculatorLauncher.Launch(null);
 
             SerializerLauncher.Launch();
+            //Calculator demo
+            CalculatorLauncher.Launch(null);
 
             Console.Read();
         }
